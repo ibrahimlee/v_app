@@ -3,12 +3,17 @@
 Material app with localization and theme supports
 
 1. Set app Locale:
+   ```dart
     await VService().loadLocale(locale: Locale('az', 'AZ'));
+   ```
 
-2. Set app ThemeMode:
+3. Set app ThemeMode:
+   ```dart
    VService().setThemeMode(ThemeMode.system);
+   ```
 
-3. Use VApp:
+5. Use VApp:
+    ```dart
    VApp(
       navigatorKey: CustomNavigator().navigatorKey,
       theme: AppThemes.light,
@@ -23,3 +28,4 @@ Material app with localization and theme supports
         '/home': (context) => HomeModule.create(), // Home screen
       },
     )
+    ```
