@@ -2,15 +2,24 @@
 
 Material app with localization and theme supports
 
-## Getting Started
+1. Set app Locale:
+    await VService().loadLocale(locale: Locale('az', 'AZ'));
 
-This project is a starting point for a Flutter application.
+2. Set app ThemeMode:
+   VService().setThemeMode(ThemeMode.system);
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Use VApp:
+   VApp(
+      navigatorKey: CustomNavigator().navigatorKey,
+      theme: AppThemes.light,
+      darkTheme: AppThemes.dark,
+      supportedLocales: AppLocales.supportedLocales,
+      title: 'Araz Market',
+      initialRoute: '/app',
+      routes: {
+        '/app': (context) => AppModule.create(), // Splash screen
+        '/auth': (context) => AuthModule.create(), // Login screen
+        '/register': (context) => RegisterModule.create(), // Register screen
+        '/home': (context) => HomeModule.create(), // Home screen
+      },
+    )
