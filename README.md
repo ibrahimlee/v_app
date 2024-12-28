@@ -1,6 +1,6 @@
 # v_app
 
-A new Flutter project.
+Material app with localization and theme supports
 
 ## Getting Started
 
