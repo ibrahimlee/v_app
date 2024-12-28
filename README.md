@@ -1,6 +1,6 @@
 # v_app
 
-Material app with localization and theme supports
+Material app with localization and theme support.
 
 1. Set app Locale:
    ```dart
